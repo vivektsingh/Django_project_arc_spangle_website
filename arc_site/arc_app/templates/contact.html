@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{% static 'css/footerstyle.css' %}">
+</head>
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+          <a href="{% url 'home2' %}" class="w3-bar-item w3-button"><b>ARC</b> Spangle</a>
+          <!-- Float links to the right. Hide them on small screens -->
+          <div class="w3-right w3-hide-small">
+            <a href="{% url 'home2' %}" class="w3-bar-item w3-button">Home</a>
+            <a href="{% url 'aboutex' %}" class="w3-bar-item w3-button">About</a>
+            <a href="{% url 'contact_view' %}" class="w3-bar-item w3-button">Contact</a>
+            <a href="{% url 'blog' %}" class="w3-bar-item w3-button">blogs</a>
+          </div>
+        </div>
+      </div>
+
+    <div class="container">
+        <div style="text-align:center">
+            <h2>-</h2>
+            <h2>Fill Contact Us Form</h2>
+            <p> ARC Spangle,leave us a message:</p>
+          </div>
+          <div class="row">
+            <div class="column">
+              <img src="{% static 'arc_app/images/company.jpg' %}" style="width:100%">
+            </div>
+            <div class="column">
+        <form method="post" action="{% url 'contact_view' %}">
+            {% csrf_token %}
+            <label for="fname">Name:</label>
+            <input type="text" id="fname" name="contact_name" required>
+
+            <label for="contact_email">Email:</label>
+            <input type="email" id="contact_email" name="contact_email" required>
+
+            <label for="contact_theme">Theme:</label>
+            <input type="text" id="contact_theme" name="contact_theme" required>
+
+            <label for="contact_description">Description:</label>
+            <textarea id="contact_description" name="contact_description"style="height:170px" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+        <!-- Placeholder for an image 
+        <div class="image-placeholder">
+            <img src="path/to/your/image.jpg" alt="Placeholder Image">
+        </div>
+    </div>-->
+    <!--<header>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home2' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+                <li><a href="{% url 'contact_view' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Contact Information</h2>
+        <p>You can reach us at: contact@example.com</p>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h2>About Us</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, velit vel facilisis gravida, dolor tortor laoreet eros.</p>
+                </div>
+                <div class="footer-section contact-form">
+                    <h2>Contact Us</h2>
+                    <form action="#" method="post">
+                        <input type="email" name="email" class="text-input contact-input" placeholder="Your email address">
+                        <textarea rows="4" name="message" class="text-input contact-input" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn btn-big contact-btn">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Your Website | Designed by Your Name
+        </div>
+    </footer>-->
+
+    <footer>
+        <div class="footer-section">
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{% url 'home2' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'contact_view' %}">Contact</a></li>
+                    <li><a href="{% url 'blog' %}">blog</a></li>
+                </ul>
+            </div>
+            <div class="get-in-touch">
+                <h3>Get in Touch</h3>
+                <div class="contact-info">
+                    <ul>
+                        <li>Email: arcspangle5075@gmail.com</li>
+                        <li>Phone: +191(123)456-7890</li>
+                        <li>Address: 03 Street,ADARSH NAGAR SECROT 62 NOIDA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="" class="icon-link"><img src="{% static 'arc_app/images/instagram.jpg' %}" width="40" height="40" alt="Instagram"></a>
+            <a href="" class="icon-link"><img src="{% static 'arc_app/images/youtube.jpg' %}" width="40" height="40" alt="YouTube"></a>
+            <a href="" class="icon-link"><img src="{% static 'arc_app/images/facebook.png' %}" width="40" height="40" alt="Facebook"></a>
+            <a href="#" class="icon-link"><img src="linkedin-icon.png" alt=""></a>
+            <!-- Add more social media icons as needed -->
+        </div>
+    </footer>
+</body>
+</html>

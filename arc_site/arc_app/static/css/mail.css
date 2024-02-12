@@ -1,0 +1,78 @@
+/* Add this CSS to your styles.css or in a style block within the head of your HTML file */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.kleo-quick-contact-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.kleo-quick-contact-link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.kleo-quick-contact-link:hover {
+    background-color: #2980b9;
+}
+
+#kleo-quick-contact {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    right: 0;
+    bottom: 60px;
+}
+
+.kleo-qc-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.kleo-contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.kleo-contact-loading, .kleo-contact-success {
+    display: none;
+    margin-top: 10px;
+    text-align: center;
+}
+

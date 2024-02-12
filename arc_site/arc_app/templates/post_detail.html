@@ -1,0 +1,39 @@
+<!-- post_detail.html -->
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>{{ post.title }}</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <article>
+            <h3>{{ post.title }}</h3>
+            {% if post.video_url %}
+                <div class="video-container">
+                    <iframe width="560" height="315" src="{{ post.video_url }}" frameborder="0" allowfullscreen></iframe>
+                </div>
+            {% endif %}
+            <p>{{ post.content }}</p>
+            <p>Published on: {{ post.pub_date }}</p>
+        </article>
+    </section>
+    <footer>
+        <p>&copy; 2024 Your Website</p>
+    </footer>
+</body>
+</html>

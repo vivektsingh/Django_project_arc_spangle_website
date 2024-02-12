@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<title>ARC Spangle</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="{% static 'css/footerstyle.css' %}">
+<link rel="stylesheet" href="{% static 'css/mail.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+<link rel="stylesheet" href="{% static 'css/card.css' %}">
+<link rel="stylesheet" href="{% static 'css/botton.css' %}">
+
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="{% url 'about' %}" class="w3-bar-item w3-button"><b style="color:red">ARC</b> Spangle</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="{% url 'home2' %}" class="w3-bar-item w3-button">Home</a>
+      <a href="{% url 'aboutex' %}" class="w3-bar-item w3-button">About</a>
+      <a href="{% url 'contact_view' %}" class="w3-bar-item w3-button">Contact</a>
+      <a href="{% url 'blog' %}" class="w3-bar-item w3-button">blogs</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="{% static 'arc_app/images/company.jpg' %}" alt="Architecture" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b style="color:red">ARC</b></span> <span class="w3-hide-small w3-text-light-grey">Spangle</span></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  
+  <!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h1>Our <b>Company</b></h1>
+        <h5 class="w3-padding-32"style="font-size: 20px">Welcome to <b>ARC Spangle</b> your premier partner in creating memorable and seamless
+             events. With a passion for perfection and a commitment to excellence, we turn your visions into reality. 
+             Our dedicated team brings creativity, precision, and innovation to every event we undertake
+             <br><br><b>Event Management Company</b><br>
+             Whether it's a grand gala, a product launch, or a milestone celebration, we specialize in crafting events that leave lasting impressions.
+              From concept to execution, we manage every detail to ensure a flawless and unforgettable experience
+            </h5>
+            <a class="btn btn-primary" href="{% url 'about' %}" role="button">READ MORE</a>
+      </div>
+  
+
+      <div class="w3-third w3-center">
+        <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
+        <!--<img src="{% static 'arc_app/images/birthdy.jpg' %}" style="width:536px" height: auto; border-radius: 5px;>-->
+        <iframe width="536px" height="400px" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!--side image section-->
+
+  <div class="container">
+    <div style="text-align:center">
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="{% static 'arc_app/images/EventStan.png' %}" style="width:100%">
+        </div>
+        <p class="w3-padding-32"style="font-size: 20px">
+
+
+
+            At ARC Spangle, we understand that every event is a unique story waiting to be told.
+             Our team of dedicated professionals is committed to transforming your ideas into seamless, captivating,
+              and memorable experiences. Whether you're envisioning a grand corporate gala, a dreamy wedding affair, 
+              or an immersive brand activation, we thrive on making your aspirations a reality.<br><br>
+
+
+              What sets us apart is our meticulous attention to detail and a passion for creativity.
+              We don't just organize events; we curate immersive journeys that leave a lasting impression. 
+              From conceptualization to execution, we handle every facet of your event with precision,
+              ensuring that every moment is a masterpiece.
+        </p>
+        
+    </div>
+
+
+<!--2 card code-->
+<br>
+<h2 style="text-align:center">Our Events</h2><br>
+<div class="row_ca">
+    <div class="colum">
+      <div class="card">
+        <img src="{% static 'arc_app/images/p2.webp' %}" alt="carporate event" style="width:100%">
+        <div class="containerBx">
+          <p class="title"><b>CORPORATE EVENT</b></p>
+          <p>Corporate event like Conferences, Product launches, Trade shows, Appreciation ceremonies, Team-building activities</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="colum">
+      <div class="card">
+        <img src="{% static 'arc_app/images/exhibition.jpg' %}" alt="Exhibition" style="width:100%">
+        <div class="containerBx">
+          <p class="title"><b>EXHIBITION</b></p>
+          <p>Exhibitions include art galleries, interpretive exhibitions, and trade fairs. Reach a 
+            larger audience.</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="colum">
+      <div class="card">
+        <img src="{% static 'arc_app/images/concert.jpg' %}" alt="concert" style="width:100%">
+        <div class="containerBx">
+         
+          <p class="title"><b>CONCERT</b></p>
+          <p>The performance may be by a single musician, or by a musical ensemble,
+             such as an orchestra, choir, or band.</p>
+         
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="colum">
+        <div class="card">
+          <img src="{% static 'arc_app/images/conference.jpg' %}" alt="conference" style="width:100%">
+          <div class="containerBx">
+           
+            <p class="title"><b>CONFERENCE</b></p>
+            <p> large-scale event that revolves around a central theme, topic. include activities,
+                 guest speakers, exhibitions, and networking opportunities.</p>
+            
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="colum">
+        <div class="card">
+          <img src="{% static 'arc_app/images/company1.jpg' %}" alt="theme parties" style="width:100%">
+          <div class="containerBx">
+        
+            <p class="title"><b>THEME PARTIES</b></p>
+            <p> A party where everyone has to dress in a particular way connected with a particular subject. theme parties elevate a celebration.</p>
+            
+            <p><button class="button"><b>Contact</b></button></p>
+          </div>
+        </div>
+      </div>
+  </div>    
+
+  
+<!-- Image of location/map 
+<div class="w3-container">
+  <img src="{% static 'arc_app/images/product1.1.webp' %}" width="1100" height="200" class="w3-image" style="">
+</div>-->
+
+
+<!-- End page content -->
+</div>
+<div class="kleo-quick-contact-wrapper off">
+    <a class="kleo-quick-contact-link quick-contact-active" href="arcspangle5075@gmail.com"><img src="{% static 'arc_app/images/mail.png' %}" width="50" height="50"></a><!--<i class="icon-mail-alt"></i>-->
+    <div id="kleo-quick-contact" style="display: block;">
+        <h4 class="kleo-qc-title" color="red">MAIL US</h4>
+        <p>We're not around right now. But you can send us an email, and we'll get back to you asap.</p>
+        <form class="kleo-contact-form" action="{% url 'contact_view' %}" method="post" novalidate="">
+            {% csrf_token %}
+            <input type="text" placeholder="Your Name" required="" id="contact_name" name="contact_name" class="form-control" value="" tabindex="276">
+            <input type="email" required="" placeholder="Your Email" id="contact_email" name="contact_email" class="form-control" value="" tabindex="277">
+            <textarea placeholder="Type your message..." required="" id="contact_content" name="contact_content" class="form-control" tabindex="278"></textarea>
+            <input type="hidden" name="action" value="kleo_sendmail">
+            <button tabindex="279" class="btn btn-default pull-right" type="submit">Send</button>
+            <div class="kleo-contact-loading">Sending <i class="icon-spinner icon-spin icon-large"></i></div>
+            <div class="kleo-contact-success"> </div>
+        </form>
+        <div class="bottom-arrow"></div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<footer>
+    <div class="footer-section">
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="{% url 'home2' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'contact_view' %}">Contact</a></li>
+                <li><a href="{% url 'blog' %}">blog</a></li>
+            </ul>
+        </div>
+        <div class="get-in-touch">
+            <h3>Get in Touch</h3>
+            <div class="contact-info">
+                <ul>
+                    <li>Email: arcspangle5075@gmail.com</li>
+                    <li>Phone: +191(123)456-7890</li>
+                    <li>Address: 03 Street,ADARSH NAGAR SECROT 62 NOIDA</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+        <a href="" class="icon-link"><img src="{% static 'arc_app/images/instagram.jpg' %}" width="40" height="40" alt="Instagram"></a>
+        <a href="" class="icon-link"><img src="{% static 'arc_app/images/youtube.jpg' %}" width="40" height="40" alt="YouTube"></a>
+        <a href="" class="icon-link"><img src="{% static 'arc_app/images/facebook.png' %}" width="40" height="40" alt="Facebook"></a>
+        <a href="#" class="icon-link"><img src="linkedin-icon.png" alt=""></a>
+        <!-- Add more social media icons as needed -->
+    </div>
+    <h5>Copyrights © 2024 arcspangle. All Rights Reserved. Privacy Policy. </h5>
+</footer>
+<script src="{% static 'arc_app/js/mail_script.js' %}"></script>
+
+
+</body>
+</html>

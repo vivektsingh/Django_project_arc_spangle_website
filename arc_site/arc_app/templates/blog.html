@@ -1,0 +1,92 @@
+<!-- blog.html -->
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts</title>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    
+
+    <!-- ... (previous head content) ... -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{% static 'css/footerstyle.css' %}">
+    
+</head>
+<body>
+    <h2>-</h2>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+          <a href="{% url 'home2' %}" class="w3-bar-item w3-button"><b style="color:red">ARC</b> Spangle</a>
+          <!-- Float links to the right. Hide them on small screens -->
+          <div class="w3-right w3-hide-small">
+            <a href="{% url 'home2' %}" class="w3-bar-item w3-button">Home</a>
+            <a href="{% url 'aboutex' %}" class="w3-bar-item w3-button">About</a>
+            <a href="{% url 'contact_view' %}" class="w3-bar-item w3-button">Contact</a>
+            <a href="{% url 'blog' %}" class="w3-bar-item w3-button">blogs</a>
+          </div>
+        </div>
+      </div>
+      <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+        <img class="w3-image" src="{% static 'arc_app/images/p2.webp' %}" alt="Architecture" style="height:600px; width:1500px">
+        <div class="w3-display-middle w3-margin-top w3-center">
+          <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b style="color:red">ARC</b>Spangle</span> <span class="w3-hide-small w3-text-light-grey"></span></h1>
+          <h2 style="color:blue"> <b>Our Blogs</b></h2>
+        </div>
+      </header>
+    
+    <section>
+        <div class="blog-container">
+        {% for post in posts %}
+            <article>
+                <div class="blog-post">
+                <h3>{{ post.title }}</h3>
+                {% if post.video_url %}
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="{{ post.video_url }}" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                {% endif %}
+                <p>{{ post.content }}</p>
+                <p>Published on: {{ post.pub_date }}</p>
+                </div>
+            </article>
+        {% endfor %}
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-section">
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{% url 'home2' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'contact_view' %}">Contact</a></li>
+                    <li><a href="{% url 'blog' %}">blog</a></li>
+                </ul>
+            </div>
+            <div class="get-in-touch">
+                <h3>Get in Touch</h3>
+                <div class="contact-info">
+                    <ul>
+                        <li>Email: arcspangle5075@gmail.com</li>
+                        <li>Phone: +191(123)456-7890</li>
+                        <li>Address: 03 Street,ADARSH NAGAR SECROT 62 NOIDA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="" class="icon-link"><img src="{% static 'arc_app/images/instagram.jpg' %}" width="40" height="40" alt="Instagram"></a>
+            <a href="" class="icon-link"><img src="{% static 'arc_app/images/youtube.jpg' %}" width="40" height="40" alt="YouTube"></a>
+            <a href="" class="icon-link"><img src="{% static 'arc_app/images/facebook.png' %}" width="40" height="40" alt="Facebook"></a>
+            <a href="#" class="icon-link"><img src="linkedin-icon.png" alt=""></a>
+            <!-- Add more social media icons as needed -->
+        </div>
+    </footer>
+
+</body>
+</html>
